@@ -1,0 +1,22 @@
+
+
+<div class="d-flex article">
+    <span class="article_id" >@Model.id</span>
+    <div class="content">
+        <div class="writer_name">@Model.writername</div>
+        <Link
+                style={{
+                    textDecoration: "none",
+                    color: "black",
+                }}
+                onClick={onClick}
+                to="/articles"
+        >
+                <div class="article_title">@Model.title</div>
+        </Link>
+        <div class="date_and_readTime">@Model.dateofsubmission</div>
+    </div>
+    <div class="article_img">
+        <img src="@Url.Content(@Model.img)" alt="no IMg" />
+    </div>
+</div>

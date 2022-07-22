@@ -1,0 +1,50 @@
+@section secondaryHeader{
+<div class="back">
+    <div class="header wrapper">
+        <div class="logoandname">
+            <div class="logo">
+                <img src='~/lib/Images/logo.svg' alt="image" style="border:0" />
+            </div>
+            <div class="name">Medium</div>
+        </div>
+        LoggedIn:<span>@ViewData["loggedInUser"]</span>
+        Writer:<span>@ViewData["writerName"]</span>
+
+        <button class="" onclick="logout()">
+            Log out
+        </button>
+        <a class="" href="/home/login">
+            About
+        </a>
+    </div>
+    <div class="line"></div>
+</div>
+}
+<div class="wrapper dashboard">
+    @if (Model == null || Model.Count == 0)
+    {
+        <div class="noposts">
+            You hav'nt post anything yet!<br></br>Start
+            writing Today!
+        </div>
+    }
+    else
+    {
+        foreach (var item in Model)
+        {
+            <partial name="./Article/_Article" model="item" />
+        }
+    }
+    <div class="start_writing_div"><a href="/writing" class="startwriting">Start Writing</a>
+    </div>
+
+</div>
+
+@* 
+<script>
+
+    function logout() {
+        $.
+}
+
+</script> *@

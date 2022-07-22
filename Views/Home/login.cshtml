@@ -1,0 +1,18 @@
+<form method="post" action="/home/login">
+    <label for="username" placeholder="username">User name: </label>
+    <input type="text" name="username">
+    <label for="password">Password:</label>
+    <input type="text" placeholder="Password" name="password">
+    <input type="submit" value="Submit">
+</form>
+
+
+@if (@Model)
+{
+    <div>success</div>
+}
+else
+{
+    <div>failed</div>
+
+}

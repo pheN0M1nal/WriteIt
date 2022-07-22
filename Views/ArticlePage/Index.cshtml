@@ -1,0 +1,22 @@
+@* @model WriteIt.Models.Article
+
+
+    <div class="line"></div>
+    <div class="wrapper">
+    <div class="ap_content">
+    <span class="ap_article_title">@Model.title</span>
+    <div class="articlepage_img">
+    <img src="@Url.Content(@Model.img)" alt="no IMg" />
+    </div>
+    <div class="d-flex">
+    <div class="ap_writer_name">
+    @Model.writerName
+    </div>
+    <div class="ap_date_and_readTime">
+    @Model.time . @Model.datentime
+    </div>
+    </div>
+
+    <p class="ap_body">@Model.body</p>
+    </div>
+    </div> *@

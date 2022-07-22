@@ -1,0 +1,36 @@
+@* @section secondaryHeader{
+    <div class="back">
+    <div class="header wrapper">
+    <div class="logoandname">
+    <div class="logo">
+    <img src='~/lib/Images/logo.svg' alt="image" style="border:0" />
+    </div>
+    <div class="name">Medium</div>
+    </div>
+    <a class="" href="/home/login">
+    About
+    </a>
+    <button type="submit" class="logout">Logout</button>
+    </div>
+    <div class="line"></div>
+    </div>
+    } *@
+
+<form method="post" action="/home/signup">
+    <label for="login" placeholder="Login">login : </label>
+    <input type="text" id="login" name="login">
+
+    <label placeholder="Writer name">Writer Name: </label>
+    <input type="text" name="writername">
+
+    <label for="password">Password:</label>
+    <input type="text" placeholder="Password" name="password">
+    <input type="submit" value="Submit">
+</form>
+
+
+<p id="validUser"></p>
+
+<div class="spinner-border" role="status" id="spinner">
+    <span class="visually-hidden">Loading...</span>
+</div>

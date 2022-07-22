@@ -1,0 +1,155 @@
+@model WriteIt.ViewModels.LoginViewModel
+
+
+
+@section secondaryHeader{
+<div class="back">
+    <div class="header wrapper">
+        <div class="logoandname">
+            <div class="logo">
+                <img src='~/lib/Images/logo.svg' alt="image" style="border:0" />
+            </div>
+            <div class="name">Medium</div>
+        </div>
+        @* LoggedIn:<span>@HttpContext.Session.GetString("loggedInUser")</span>
+            Writer:<span>@ViewData["writerName"]</span> *@
+
+        <form method="get" asp-controller="Account" asp-action="Logout">
+            <button type="submit" class="btn btn-primary">Logout</button>
+        </form>
+        <a class="" href="/home/login">
+            About
+        </a>
+    </div>
+    <div class="line"></div>
+</div>
+}
+
+<div class="line"></div>
+<div class="wrapper writing">
+    @* <div
+        class={
+        getMessage.isPublished === "true"
+        ? "success_upload"
+        : "fail_upload"
+        }
+        >
+        Published Successfully !!
+        <Link class="gotodashboard" to="/dashboard">
+        Go to Dashboard
+        </Link>
+        </div> *@
+
+    @* @{
+        ViewBag.Title = "UploadFile";
+        } *@
+    <div class="">
+        <input class="enter_title" type="text" placeholder="Title" id="title" />
+    </div>
+
+    <h2>Write new story</h2>
+
+    <div id="delta-container">
+
+    </div>
+
+    <div id="Tekst" name="Tekst"></div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2" for="first-name">
+            Upload Photo <span class="required">*</span>
+        </label>
+        <div class="col-md-6" id="dropzone">
+            <div action="/writing/Upload" class="dropzone" id="uploader">
+                Drop files here or click to upload.<br>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="">
+        <div class="">Month</div>
+        <div class="">
+            <label><input type="radio" value="history" name="category" /><span>History </span></label>
+            <label></label><input type="radio" value="geography" name="category" /><span>geography</span>
+            </label>
+        </div>
+    </div>
+
+    <button value="Publisxdsssh" onclick="onSubmit()">Publish</button>
+</div>
+
+
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<script>
+
+    // quill
+    var toolbarOptions = [
+        ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+        ['image'],
+        ['blockquote', 'code-block'],
+
+        [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+        [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+        [{ 'script': 'sub' }, { 'script': 'super' }],      // superscript/subscript
+        [{ 'indent': '-1' }, { 'indent': '+1' }],          // outdent/indent
+        [{ 'direction': 'rtl' }],                         // text direction
+
+        [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
+        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+
+        [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+        [{ 'font': [] }],
+        [{ 'align': [] }],
+
+        ['clean']                                         // remove formatting button
+    ];
+    var options = {
+        theme: 'snow',
+        placeholder: 'Start writing here!',
+        modules: {
+            toolbar: toolbarOptions
+        }
+    };
+
+
+    var quill = new Quill('#Tekst', options);
+    var container = document.querySelector('#delta-container');
+
+    @* function onSubmit() {
+            var category = $("input[name='category']:checked").val();
+            var title = $("#title").val();
+            var contents = quill.getContents();
+            var jsonQuill = JSON.stringify(contents, null, 2);
+            var request = { title: title, category: category, data: jsonQuill, time: readingTime(contents.innerHTML) };
+
+            $.ajax({
+            type: "POST",
+            cache: false,
+            url: "/writing/uploadContent",
+            data: JSON.stringify(request),
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function (result) {
+            console.log(result);
+            },
+            error: function (result) {
+            alert("No Connection to server");
+            }
+            });
+            } *@
+
+
+        function quillGetHTML(inputDelta) {
+            var tempCont = document.createElement("div");
+            (new Quill(tempCont)).setContents(inputDelta);
+            return tempCont.getElementsByClassName("ql-editor")[0].innerHTML;
+        }
+
+
+
+</script>

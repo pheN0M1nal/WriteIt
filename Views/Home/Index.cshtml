@@ -1,0 +1,55 @@
+﻿@{
+  Layout = "_Layout";
+}
+
+
+
+
+@section primaryHeader{
+    <div class="back">
+        <div class="header wrapper">
+            <div class="logoandname">
+                    <div class="logo">
+                        <img src='~/lib/Images/logo.svg'  alt="image" style="border:0" />
+                    </div>
+                    <div class="name">Medium</div>
+            </div>
+            <a class="getstarted" href="/Account/Login">
+                Login
+            </a>
+            <a class="" href="/Account/Register">
+                SignUp
+            </a>
+            <a class="" href="/Account/Login">
+                About
+            </a>
+        </div>
+        <div class="line"></div>
+    </div>
+    }
+
+<div class="back">
+      <div class="hero wrapper">
+          <div class="leftwrapper">
+                <div class="maintext">
+                    Write, read, and connect
+                </div>
+                <div class="secondarytext">
+                    It's easy and free to post your thinking on any
+                    topic and connect with millions of readers.
+                </div>
+                    <a class="startwriting" href="/writing
+                    ">
+                          Start Writing
+                    </a>
+                    <asp:Button ID="Button1" runat="server" Text="Click here" OnClick="Button1_Click" />
+
+                    <input type="button" onclick="GetMessage()" value="Get Message"/>
+<p></p> 
+          </div>
+          <div class="heroimg">
+                <img src="~/lib/Images/hero.png" alt="no hero img" />
+          </div>
+      </div>
+</div>
+  

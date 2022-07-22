@@ -1,0 +1,503 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap");
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+
+.d-flex {
+    display: flex;
+    padding-top: 20px;
+}
+
+.line {
+    height: 1px;
+    background-color: rgb(27, 23, 23);
+}
+
+.homepage {
+}
+
+/* header */
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header {
+    font-family: "Playfair Display", serif;
+    padding-top: 0.7em;
+    max-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.logo {
+    padding-top: 9px;
+    width: 40px;
+}
+
+.name {
+    text-align: center;
+    font-size: 1.8em;
+    margin-left: 4px;
+    font-weight: 800;
+}
+
+.logoandname {
+    display: flex;
+    align-items: center;
+}
+
+.getstarted {
+    color: whitesmoke;
+    background-color: black;
+    border-radius: 20px;
+    border-style: none;
+    border: 1px solid black;
+    padding: 1em 2em;
+    cursor: pointer;
+    /*mb10*/
+}
+.getstarted:hover{
+    background-color: transparent;
+    color: black
+}
+
+.username {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-weight: 500;
+    padding-right: 10px;
+}
+
+.logout {
+    background-color: #1a181a;
+    padding: 0.5em 1em;
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* header */
+
+
+/* hero */
+
+.back {
+    background-color: #f9d342;
+}
+
+.hero {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.heroimg {
+}
+
+.maintext {
+    color: rgb(33, 26, 26);
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 2.5em;
+}
+
+.secondarytext {
+    margin: 5px 0 15px 0;
+}
+
+.leftwrapper {
+    width: 60%;
+}
+
+.startwriting {
+    font-weight: 700;
+    border-style: solid;
+    border: solid 1px black;
+    color: rgb(33, 26, 26);
+    background: transparent;
+    border-radius: 20px;
+    padding: 0.7em 2em;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+    .startwriting:hover {
+        background-color: #1a181a;
+        color: whitesmoke;
+    }
+/* hero */
+
+/* Article */
+.content {
+    width: 300px;
+}
+
+.article {
+    max-width: 400px;
+    padding-top: 50px;
+}
+
+.writer_name {
+    font-size: 0.8em;
+}
+
+.article_title {
+    text-decoration: none;
+    width: 300px;
+}
+
+.date_and_readTime {
+    font-size: 0.7em;
+}
+
+.article_img {
+    width: 130px;
+}
+
+.article_id{
+    font-size: 2.5rem;
+    padding-right: 1rem;
+}
+
+/* Article */
+
+/* Writing */
+
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+body{
+  font-family: 'Raleway', sans-serif;
+}
+.list-choice{
+  width:300px;
+  margin:1em 0;
+  position: relative;
+  cursor: pointer;  
+}
+.list-choice input[type="radio"]{
+  position:absolute;
+  left:-9999px;
+}
+
+.list-choice-title {
+width: 100%;
+display: block;
+background: #D8D8D8;
+text-align: center;
+padding: 0.55em 1em;
+box-sizing: border-box;
+color: #FFF;
+text-shadow: 0 1px 0 #CACACA;
+border-radius: 0.2em;
+}
+.list-choice:hover .list-choice-title {
+border-radius:0.2em 0.2em 0 0;
+}
+.list-choice-objects label:nth-last-of-type(1) span{
+  border-radius:0 0 0.2em 0.2em;
+}
+.list-choice input[type="radio"] + span {
+color: #FFF;
+background: #D8D8D8;
+padding: 0.55em 1em;
+display: block;
+text-align: center;
+box-sizing: border-box;
+cursor: pointer;
+width: 100%;
+}
+.list-choice-objects {
+position: absolute;
+top: 0;
+padding-top: 2.1em;
+box-sizing: border-box;
+width: 100%;
+overflow: hidden;
+max-height: 0;
+transition: all 250ms ease;
+}
+.list-choice:hover .list-choice-objects  input[type="radio"] + span {
+position: relative;
+top: 0;
+transition: all 250ms ease-in-out;
+}
+.list-choice:hover input[type="radio"] + span:hover {
+background:#BBB;
+}
+.list-choice:hover input[type="radio"]:checked + span:hover {
+background:#74D68E;
+}
+.list-choice input[type="radio"]:checked + span {
+background: #74D68E;
+position: absolute;
+top: 0em;
+border-radius: 0.2em;
+}
+.list-choice:hover input[type="radio"]:checked + span {
+border-radius: 0;
+}
+.list-choice:hover .list-choice-objects label:nth-last-of-type(1) input[type="radio"]:checked + span{
+  border-radius:0 0 0.2em 0.2em;
+}
+
+.list-choice:hover .list-choice-objects {
+max-height: 540px;
+}
+
+.writing {
+    padding-top: 5em;
+    margin: 0 auto;
+}
+
+.writing_form {
+    display: block;
+}
+
+.enter_title {
+    border: none;
+    height: 80px;
+    min-width: 400px;
+    font-size: 2em;
+    overflow: auto;
+    outline: none;
+}
+
+.cursor {
+    position: relative;
+}
+
+    .cursor i {
+        position: absolute;
+        width: 1px;
+        height: 500px;
+        background-color: rgb(153, 144, 144);
+        left: 2px;
+        top: 0;
+        animation-name: blink;
+        animation-duration: 800ms;
+        animation-iteration-count: infinite;
+        opacity: 1;
+    }
+
+    .cursor input:focus + i {
+        display: none;
+    }
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.enter_body {
+    border: none;
+    height: 500px;
+    min-width: 400px;
+    font-size: 2em;
+    resize: none;
+    overflow: auto;
+    outline: none;
+    color: #2e2729;
+    margin-bottom: 20px;
+}
+
+.mt-10 {
+    margin-top: 20px;
+}
+
+.publish {
+    color: whitesmoke;
+    background-color: rgb(77, 172, 101);
+    border-radius: 20px;
+    border-style: none;
+    padding: 0.8em 2em;
+    cursor: pointer;
+    border: 1px solid#2e2729;
+}
+
+.success_upload {
+    display: block;
+    background-color: lightgreen;
+    padding: 1em 0;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: 600;
+    max-width: 500px;
+}
+
+.fail_upload {
+    display: none;
+}
+
+.gotodashboard {
+    margin-left: 10px;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 20px;
+    border-style: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+    .gotodashboard:hover {
+        background-color: rgb(82, 52, 52);
+    }
+
+input[type="file"] {
+    display: none;
+}
+
+.inputfile {
+    background-color: rgb(77, 172, 101);
+    color: #1a181a;
+    color: whitesmoke;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Writing */
+
+/* article_page */
+
+.article {
+    padding-bottom: 10px;
+}
+
+.ap_content {
+    padding: 50px 0;
+}
+
+.articlepage_img {
+}
+
+.ap_writer_name {
+    font-weight: 800;
+    margin-right: 10px;
+}
+
+.ap_date_and_readTime {
+    font-size: 0.8em;
+    padding-top: 3px;
+}
+
+.ap_article_title {
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.ap_body {
+}
+/* article_page */
+
+/*dashboard*/
+
+.dashboard {
+}
+
+.noposts {
+    font-size: 2em;
+    text-align: center;
+    padding: 2em 0;
+}
+
+/*dashboard*/
+
+.start_writing_div{
+    margin-top: 10px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.display {
+    display: block;
+}
+
+/*responsivness*/
+
+@media (max-width: 500px) {
+    .heroimg {
+        display: none;
+    }
+}
+
+@media (min-width: 1100px) {
+    .enter_body {
+        min-width: 1000px;
+    }
+
+    .enter_title {
+        min-width: 900px;
+    }
+
+    .header {
+        padding: 2em 0;
+    }
+
+    .hero {
+        padding: 4em 0;
+    }
+
+    .maintext {
+        font-size: 5em;
+    }
+
+    .leftwrapper {
+        width: 30%;
+    }
+
+    .secondarytext {
+        font-size: 1.5em;
+    }
+
+    .heroimg {
+        display: block;
+    }
+}
